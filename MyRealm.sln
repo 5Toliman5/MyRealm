@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRealm.Domain", "MyRealm.Domain\MyRealm.Domain.csproj", "{A309D895-6216-4BBC-8811-B7295AAC0F20}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRealm.Authentication.Infrastructure", "MyRealm.Infrastructure\MyRealm.Authentication.Infrastructure.csproj", "{9CC5EDF5-7D96-460F-82C8-728D08FA05E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication", "Authentication", "{04E152FA-CA70-4C54-A110-A773AFF84202}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRealm.Authentication.DataAccess", "MyRealm.DataAccess\MyRealm.Authentication.DataAccess.csproj", "{A1728C0C-E516-485D-A441-AD3215E3A392}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRealm.Authentication.Api", "MyRealm.Authentication.Api\MyRealm.Authentication.Api.csproj", "{6F43E630-3B17-4015-ABE6-679CF4BE8CFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRealm.Contracts", "MyRealm.Contracts\MyRealm.Contracts.csproj", "{62F961A9-A3A7-415C-9F10-7CCFD09CC31B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A309D895-6216-4BBC-8811-B7295AAC0F20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A309D895-6216-4BBC-8811-B7295AAC0F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A309D895-6216-4BBC-8811-B7295AAC0F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A309D895-6216-4BBC-8811-B7295AAC0F20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CC5EDF5-7D96-460F-82C8-728D08FA05E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CC5EDF5-7D96-460F-82C8-728D08FA05E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CC5EDF5-7D96-460F-82C8-728D08FA05E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CC5EDF5-7D96-460F-82C8-728D08FA05E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1728C0C-E516-485D-A441-AD3215E3A392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1728C0C-E516-485D-A441-AD3215E3A392}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1728C0C-E516-485D-A441-AD3215E3A392}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1728C0C-E516-485D-A441-AD3215E3A392}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F43E630-3B17-4015-ABE6-679CF4BE8CFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F43E630-3B17-4015-ABE6-679CF4BE8CFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F43E630-3B17-4015-ABE6-679CF4BE8CFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F43E630-3B17-4015-ABE6-679CF4BE8CFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62F961A9-A3A7-415C-9F10-7CCFD09CC31B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62F961A9-A3A7-415C-9F10-7CCFD09CC31B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62F961A9-A3A7-415C-9F10-7CCFD09CC31B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62F961A9-A3A7-415C-9F10-7CCFD09CC31B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9CC5EDF5-7D96-460F-82C8-728D08FA05E0} = {04E152FA-CA70-4C54-A110-A773AFF84202}
+		{A1728C0C-E516-485D-A441-AD3215E3A392} = {04E152FA-CA70-4C54-A110-A773AFF84202}
+		{6F43E630-3B17-4015-ABE6-679CF4BE8CFD} = {04E152FA-CA70-4C54-A110-A773AFF84202}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B07A009-637F-4438-BBD8-45612A721ECC}
+	EndGlobalSection
+EndGlobal
