@@ -19,9 +19,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MyRealm.Contracts\MyRealm.Contracts.csproj" />
-    <ProjectReference Include="..\MyRealm.DataAccess\MyRealm.Authentication.DataAccess.csproj" />
     <ProjectReference Include="..\MyRealm.Domain\MyRealm.Domain.csproj" />
-    <ProjectReference Include="..\MyRealm.Infrastructure\MyRealm.Authentication.Infrastructure.csproj" />
+	  <ProjectReference Include="..\MyRealm.Authentication.DataAccess\MyRealm.Authentication.DataAccess.csproj" />
+    <ProjectReference Include="..\MyRealm.Authentication.Infrastructure\MyRealm.Authentication.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

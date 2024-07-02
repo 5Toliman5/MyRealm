@@ -5,11 +5,11 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRealm.Domain", "MyRealm.Domain\MyRealm.Domain.csproj", "{A309D895-6216-4BBC-8811-B7295AAC0F20}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRealm.Authentication.Infrastructure", "MyRealm.Infrastructure\MyRealm.Authentication.Infrastructure.csproj", "{9CC5EDF5-7D96-460F-82C8-728D08FA05E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRealm.Authentication.Infrastructure", "MyRealm.Authentication.Infrastructure\MyRealm.Authentication.Infrastructure.csproj", "{9CC5EDF5-7D96-460F-82C8-728D08FA05E0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication", "Authentication", "{04E152FA-CA70-4C54-A110-A773AFF84202}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRealm.Authentication.DataAccess", "MyRealm.DataAccess\MyRealm.Authentication.DataAccess.csproj", "{A1728C0C-E516-485D-A441-AD3215E3A392}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRealm.Authentication.DataAccess", "MyRealm.Authentication.DataAccess\MyRealm.Authentication.DataAccess.csproj", "{A1728C0C-E516-485D-A441-AD3215E3A392}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRealm.Authentication.Api", "MyRealm.Authentication.Api\MyRealm.Authentication.Api.csproj", "{6F43E630-3B17-4015-ABE6-679CF4BE8CFD}"
 EndProject
