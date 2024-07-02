@@ -1,6 +1,30 @@
-@MyRealm.Authentication.Api_HostAddress = http://localhost:5205
-
-GET {{MyRealm.Authentication.Api_HostAddress}}/weatherforecast/
+@host = http://localhost:7145
+### Create a new API user
+POST {{host}}/api/ApiUser/CreateUser
+Content-Type: application/json
+{
+    "UserName": "testuser",
+    "Password": "password123"
+}
+### Authenticate a user
+POST {{host}}/AuthenticateApiUser/Authenticate
+Content-Type: application/json
+{
+    "UserName": "testuser",
+    "Password": "password123"
+}
+### Refresh tokens
+POST {{host}}/AuthenticateApiUser/Refresh
+Content-Type: application/json
+{
+    "RefreshToken": "your-refresh-token-here"
+}
+### Get all API users
+GET {{host}}/Development
 Accept: application/json
-
-###
+### Get a specific API user by ID
+GET {{host}}/Development/1
+Content-Type: application/json
+### Delete a specific API user by ID
+DELETE {{host}}/Development/1
+Content-Type: application/json

@@ -1,23 +1,20 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MyRealm.Authentication.Infrastructure.Services;
 using MyRealm.Contracts.Authentication.Request;
-using MyRealm.Contracts.Authentication.Response;
 
 namespace MyRealm.Authentication.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ApiUserController : ControllerBase
+    public class ApiUserController : BaseController
     {
-        private readonly ILogger<ApiUserController> Logger;
         private readonly IUserService UserService;
 
-        public ApiUserController(IUserService userService, ILogger<ApiUserController> logger)
+        public ApiUserController(ILogger<BaseController> logger, IUserService userService) : base(logger)
         {
             this.UserService = userService;
-            this.Logger = logger;
         }
+
         [HttpPost("CreateUser")]
         public async Task<ActionResult> CreateUser(CreateApiUserRequest request)
         {

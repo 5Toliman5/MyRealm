@@ -1,22 +1,18 @@
 using Microsoft.AspNetCore.Mvc;
 using MyRealm.Contracts.Authentication.Request;
 using MyRealm.Contracts.Authentication.Response;
-using MyRealm.Domain.Authentication.Entities;
 using MyRealm.Domain.Authentication.Services;
-using MyRealm.Domain.Common.Repositories;
 
 namespace MyRealm.Authentication.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class AuthenticateApiUserController : ControllerBase
+    public class AuthenticateApiUserController : BaseController
     {
-        private readonly ILogger<AuthenticateApiUserController> Logger;
         private readonly IAuthService AuthService;
 
-        public AuthenticateApiUserController(ILogger<AuthenticateApiUserController> logger, IAuthService authService)
+        public AuthenticateApiUserController(ILogger<BaseController> logger, IAuthService authService) : base(logger)
         {
-            this.Logger = logger;
             this.AuthService = authService;
         }
 
