@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNet.Identity;
+using MyReailm.Authentication.Domain.DTO;
+using MyReailm.Authentication.Domain.Entities;
+using MyReailm.Authentication.Domain.Repositories;
+using MyReailm.Authentication.Domain.Services;
 using MyRealm.Authentication.Infrastructure.Exceptions;
-using MyRealm.Domain.Authentication.DTO;
-using MyRealm.Domain.Authentication.Entities;
-using MyRealm.Domain.Authentication.Repositories;
 
 namespace MyRealm.Authentication.Infrastructure.Services
 {

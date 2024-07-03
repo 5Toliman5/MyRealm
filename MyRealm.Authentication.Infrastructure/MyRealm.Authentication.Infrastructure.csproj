@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MyRealm.Authentication.DataAccess\MyRealm.Authentication.DataAccess.csproj" />
-    <ProjectReference Include="..\MyRealm.Domain\MyRealm.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

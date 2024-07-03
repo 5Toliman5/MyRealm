@@ -1,4 +1,4 @@
-﻿using MyRealm.Domain.Common.Exceptions;
+﻿using MyRealm.Common.Exceptions;
 using Newtonsoft.Json;
 
 namespace MyRealm.Authentication.Api.Middleware

@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MyRealm.Domain.Authentication.Entities;
-using System.Reflection.Metadata;
+using MyReailm.Authentication.Domain.Entities;
 
 namespace MyRealm.DataAccess.EFDbContexts
 {

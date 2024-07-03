@@ -1,14 +1,13 @@
-﻿using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.IdentityModel.Tokens;
+using MyReailm.Authentication.Domain.DTO;
+using MyReailm.Authentication.Domain.Entities;
+using MyReailm.Authentication.Domain.Services;
 using MyRealm.Authentication.Infrastructure.Models;
-using MyRealm.Domain.Authentication.DTO;
-using MyRealm.Domain.Authentication.Entities;
-using MyRealm.Domain.Authentication.Services;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
-using SecurityToken = MyRealm.Domain.Authentication.Entities.SecurityToken;
+using SecurityToken = MyReailm.Authentication.Domain.Entities.SecurityToken;
 
 
 namespace MyRealm.Authentication.Infrastructure.Services

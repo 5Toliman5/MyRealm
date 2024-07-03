@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -18,8 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MyRealm.Contracts\MyRealm.Contracts.csproj" />
-    <ProjectReference Include="..\MyRealm.Domain\MyRealm.Domain.csproj" />
+    <ProjectReference Include="..\MyReailm.Authentication.Domain\MyReailm.Authentication.Domain.csproj" />
+    <ProjectReference Include="..\MyRealm.Authentication.Contracts\MyRealm.Authentication.Contracts.csproj" />
 	  <ProjectReference Include="..\MyRealm.Authentication.DataAccess\MyRealm.Authentication.DataAccess.csproj" />
     <ProjectReference Include="..\MyRealm.Authentication.Infrastructure\MyRealm.Authentication.Infrastructure.csproj" />
   </ItemGroup>
