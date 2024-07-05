@@ -22,6 +22,7 @@
     <ProjectReference Include="..\MyRealm.Authentication.Contracts\MyRealm.Authentication.Contracts.csproj" />
 	  <ProjectReference Include="..\MyRealm.Authentication.DataAccess\MyRealm.Authentication.DataAccess.csproj" />
     <ProjectReference Include="..\MyRealm.Authentication.Infrastructure\MyRealm.Authentication.Infrastructure.csproj" />
+    <ProjectReference Include="..\MyRealm.Common\MyRealm.Common.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-using MyRealm.Authentication.Api.Middleware;
+using MyRealm.Common.Middleware;
 
 namespace MyRealm.Authentication.Api
 {
@@ -17,7 +17,7 @@ namespace MyRealm.Authentication.Api
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
-            app.UseMiddleware<ErrorHandler>();
+            app.UseMiddleware<ErrorHandlerMiddleware>();
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
