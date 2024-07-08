@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyRealm.Common\MyRealm.Common.csproj" />
+    <ProjectReference Include="..\MyRealm.Messaging.Contracts\MyRealm.Messaging.Contracts.csproj" />
+    <ProjectReference Include="..\MyRealm.Messaging.DataAccess\MyRealm.Messaging.DataAccess.csproj" />
+    <ProjectReference Include="..\MyRealm.Messaging.Domain\MyRealm.Messaging.Domain.csproj" />
+    <ProjectReference Include="..\MyRealm.Messaging.Infrastructure\MyRealm.Messaging.Infrastructure.csproj" />
+    <ProjectReference Include="..\MyRealm.Messaging.RabbitMQ.Client\MyRealm.Messaging.RabbitMQ.Client.csproj" />
+  </ItemGroup>
+
+</Project>
