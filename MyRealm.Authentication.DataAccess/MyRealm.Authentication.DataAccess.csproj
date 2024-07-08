@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MyRealm.Domain\MyRealm.Domain.csproj" />
+    <ProjectReference Include="..\MyReailm.Authentication.Domain\MyReailm.Authentication.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MyReailm.Authentication.Domain.Entities;
+using MyReailm.Authentication.Domain.Repositories;
+using MyRealm.Common.Repositories;
 using MyRealm.DataAccess.EFDbContexts;
-using MyRealm.Domain.Authentication.Entities;
-using MyRealm.Domain.Authentication.Repositories;
-using MyRealm.Domain.Common.Repositories;
 
 namespace MyRealm.DataAccess.Repositories
 {

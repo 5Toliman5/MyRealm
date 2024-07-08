@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MyRealm.Authentication.Infrastructure.Services;
-using MyRealm.Contracts.Authentication.Request;
+using MyReailm.Authentication.Domain.Services;
+using MyRealm.Authentication.Contracts.Request;
 
 namespace MyRealm.Authentication.Api.Controllers
 {

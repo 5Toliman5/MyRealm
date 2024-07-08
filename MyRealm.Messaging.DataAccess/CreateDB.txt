@@ -1,0 +1,23 @@
+CREATE DATABASE [MyRealm.Messaging];
+USE [MyRealm.Messaging];
+CREATE TABLE EmailNotificationMessages (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Message NVARCHAR(MAX) NOT NULL,
+    State SMALLINT NOT NULL,
+    EmailAddress NVARCHAR(255) NOT NULL
+);
+
+CREATE TABLE SmsNotificationMessages (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Message NVARCHAR(MAX) NOT NULL,
+    State SMALLINT NOT NULL,
+    PhoneNumber NVARCHAR(15) NOT NULL
+);
+CREATE LOGIN MyRealm WITH PASSWORD = 'MyRealm';
+GO
+USE [MyRealm.Messaging];
+GO
+CREATE USER MyRealm FOR LOGIN MyRealm;
+GO
+ALTER ROLE db_owner ADD MEMBER MyRealm;
+GO
