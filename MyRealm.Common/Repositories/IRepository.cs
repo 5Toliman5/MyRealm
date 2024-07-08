@@ -4,7 +4,7 @@
     {
         Task<IList<TEntity>> GetAllAsync();
         Task<TEntity?> GetByIdAsync(TId id);
-        Task InsertAsync(TEntity entity);
+        Task<TEntity> InsertAsync(TEntity entity);
         Task InsertAsync(IEnumerable<TEntity> entities);
         Task UpdateAsync(TEntity entity);
         Task DeleteAsync(TEntity entity);

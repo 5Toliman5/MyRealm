@@ -29,10 +29,11 @@ namespace MyRealm.Common.Repositories
             DbContext.Set<TEntity>().AddRange(entitySet);
             await DbContext.SaveChangesAsync();
         }
-        public virtual async Task InsertAsync(TEntity entity)
+        public virtual async Task<TEntity> InsertAsync(TEntity entity)
         {
             DbContext.Set<TEntity>().Add(entity);
             await DbContext.SaveChangesAsync();
+            return entity;
         }
 
         public virtual async Task UpdateAsync(TEntity entity)

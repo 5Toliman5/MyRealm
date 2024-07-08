@@ -10,8 +10,8 @@ namespace MyRealm.Authentication.Api
 
             // Add services to the container.
             builder.Services.AddControllers();
-            builder.Services.AddDataAccessLayer(builder.Configuration);
-            builder.Services.AddInfrastructureLayer(builder.Configuration);
+            builder.Services.RegisterDataAccessLayer(builder.Configuration);
+            builder.Services.RegisterInfrastructureLayer(builder.Configuration);
 
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

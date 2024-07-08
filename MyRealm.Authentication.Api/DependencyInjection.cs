@@ -12,13 +12,13 @@ namespace MyRealm.Authentication.Api
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddDataAccessLayer(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection RegisterDataAccessLayer(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<AuthenticationDbContext>(options => options.UseNpgsql(configuration.GetConnectionString("Default")));
             services.AddTransient<IUserRepository, UserRepository>();
             return services;
         }
-        public static IServiceCollection AddInfrastructureLayer(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection RegisterInfrastructureLayer(this IServiceCollection services, IConfiguration configuration)
         {
             //builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
             var jwtSettings = new JwtSettings();
