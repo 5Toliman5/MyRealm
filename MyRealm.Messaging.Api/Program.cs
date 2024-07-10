@@ -24,11 +24,12 @@ namespace MyRealm.Messaging.Api
             builder.Services.RegisterRabbitMq(builder.Configuration);
             builder.Services.RegisterDataAccessLayer(builder.Configuration);
             builder.Services.RegisterInfrastructureLayer(builder.Configuration);
-
+            builder.Services.RegisterAnthentication(builder.Configuration);
 
             var app = builder.Build();
             app.UseMiddleware<MessagingApiErrorHandlerMiddleware>();
             app.UseHttpsRedirection();
+            app.UseAuthentication();
             app.UseAuthorization();
             app.MapControllers();
 

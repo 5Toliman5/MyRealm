@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyRealm.Messaging.Contracts;
 using MyRealm.Messaging.Contracts.Request;
@@ -14,6 +15,7 @@ namespace MyRealm.Messaging.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class NotificationsController : ControllerBase
     {
         private readonly ILogger<NotificationsController> Logger;
@@ -31,7 +33,6 @@ namespace MyRealm.Messaging.Api.Controllers
         [HttpPost]
         [Consumes("application/xml")]
         [Produces("application/json")]
-        [HttpPost]
         public async Task<IActionResult> HandleNotification()
         {
             this.Logger.LogInformation("HandleNotification started.");
