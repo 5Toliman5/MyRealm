@@ -1,4 +1,6 @@
+using Microsoft.EntityFrameworkCore;
 using MyRealm.Common.Middleware;
+using MyRealm.DataAccess.EFDbContexts;
 
 namespace MyRealm.Authentication.Api
 {
@@ -18,6 +20,9 @@ namespace MyRealm.Authentication.Api
 
             var app = builder.Build();
             app.UseMiddleware<ErrorHandlerMiddleware>();
+            using var serviceScope = app.Services.GetService<IServiceScopeFactory>().CreateScope();
+            var context = serviceScope.ServiceProvider.GetRequiredService<AuthenticationDbContext>();
+            context.Database.Migrate();
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {

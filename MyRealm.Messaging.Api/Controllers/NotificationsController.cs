@@ -8,7 +8,7 @@ using MyRealm.Messaging.Domain.Repositories;
 using MyRealm.Messaging.Infrastructure;
 using MyRealm.Messaging.Infrastructure.Translators.RabbitMq.Notifications;
 using MyRealm.Messaging.Infrastructure.Translators.Request.Notifications;
-using MyRealm.Messaging.RabbitMQ.Client;
+using MyRealm.Messaging.RabbitMq.Client;
 using System.Xml.Serialization;
 
 namespace MyRealm.Messaging.Api.Controllers

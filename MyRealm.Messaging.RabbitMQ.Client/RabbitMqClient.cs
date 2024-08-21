@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Logging;
 using MyRealm.Messaging.Domain.Entities.RabbitMq;
 
-namespace MyRealm.Messaging.RabbitMQ.Client
+namespace MyRealm.Messaging.RabbitMq.Client
 {
     public class RabbitMqClient : IRabbitMqClient
     {
@@ -11,16 +11,16 @@ namespace MyRealm.Messaging.RabbitMQ.Client
         private readonly int SendDelayInSeconds;
         public RabbitMqClient(ILogger<RabbitMqClient> logger, IMessageScheduler messageScheduler, int sendDelayInSeconds)
         {
-            this.Logger = logger;
-            this.SendDelayInSeconds = sendDelayInSeconds;
-            this.MessageScheduler = messageScheduler;
+            Logger = logger;
+            SendDelayInSeconds = sendDelayInSeconds;
+            MessageScheduler = messageScheduler;
         }
 
         public async Task<bool> ScheduleMessage<T>(T message) where T : BaseRabbitMqMessage
         {
-            this.Logger.LogInformation($"Queuing {message.GetType()} notification started.");
-            var result = await this.MessageScheduler.SchedulePublish(TimeSpan.FromSeconds(this.SendDelayInSeconds), message);
-            this.Logger.LogInformation($"Queuing {message.GetType()} notification ended.");
+            Logger.LogInformation($"Queuing {message.GetType()} notification started.");
+            var result = await MessageScheduler.SchedulePublish(TimeSpan.FromSeconds(SendDelayInSeconds), message);
+            Logger.LogInformation($"Queuing {message.GetType()} notification ended.");
             return !string.IsNullOrEmpty(result.TokenId.ToString());
         }
     }

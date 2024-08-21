@@ -1,11 +1,5 @@
-
-using MassTransit;
 using Microsoft.AspNetCore.Mvc.Formatters;
-using Microsoft.Extensions.Configuration;
 using MyRealm.Messaging.Api.Middleware;
-using MyRealm.Messaging.DataAccess.Repositories;
-using MyRealm.Messaging.Domain.Repositories;
-using MyRealm.Messaging.RabbitMQ.Client;
 
 namespace MyRealm.Messaging.Api
 {

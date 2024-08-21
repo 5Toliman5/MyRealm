@@ -4,7 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using MyRealm.Messaging.DataAccess.Repositories;
 using MyRealm.Messaging.Domain.Repositories;
 using MyRealm.Messaging.Infrastructure;
-using MyRealm.Messaging.RabbitMQ.Client;
+using MyRealm.Messaging.RabbitMq.Client;
 using System.Text;
 
 namespace MyRealm.Messaging.Api

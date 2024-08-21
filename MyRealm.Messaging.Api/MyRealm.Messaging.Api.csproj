@@ -17,7 +17,7 @@
     <ProjectReference Include="..\MyRealm.Messaging.DataAccess\MyRealm.Messaging.DataAccess.csproj" />
     <ProjectReference Include="..\MyRealm.Messaging.Domain\MyRealm.Messaging.Domain.csproj" />
     <ProjectReference Include="..\MyRealm.Messaging.Infrastructure\MyRealm.Messaging.Infrastructure.csproj" />
-    <ProjectReference Include="..\MyRealm.Messaging.RabbitMQ.Client\MyRealm.Messaging.RabbitMQ.Client.csproj" />
+    <ProjectReference Include="..\MyRealm.Messaging.RabbitMQ.Client\MyRealm.Messaging.RabbitMq.Client.csproj" />
   </ItemGroup>
 
 </Project>
