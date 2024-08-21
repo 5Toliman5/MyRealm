@@ -31,7 +31,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRealm.Messaging.DataAcces
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRealm.Messaging.Infrastructure", "MyRealm.Messaging.Infrastructure\MyRealm.Messaging.Infrastructure.csproj", "{0E9140DB-4322-4E2B-804A-BE4CD5D5B250}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRealm.Messaging.RabbitMq.Consumer", "MyRealm.Messaging.RabbitMq.Consumer\MyRealm.Messaging.RabbitMq.Consumer.csproj", "{BABD0F4A-3757-41DC-93F2-A77A557C16D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRealm.Messaging.RabbitMq.Consumer", "MyRealm.Messaging.RabbitMq.Consumer\MyRealm.Messaging.RabbitMq.Consumer.csproj", "{BABD0F4A-3757-41DC-93F2-A77A557C16D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
