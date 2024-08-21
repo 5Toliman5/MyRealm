@@ -1,6 +1,6 @@
 ﻿using MyRealm.Messaging.Domain.Entities.RabbitMq;
 
-namespace MyRealm.Messaging.RabbitMQ.Client
+namespace MyRealm.Messaging.RabbitMq.Client
 {
     public interface IRabbitMqClient
     {

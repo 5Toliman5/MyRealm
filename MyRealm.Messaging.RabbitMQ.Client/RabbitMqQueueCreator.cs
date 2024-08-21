@@ -1,7 +1,7 @@
 ﻿using RabbitMQ.Client;
 using System.Text;
 
-namespace MyRealm.Messaging.RabbitMQ.Client
+namespace MyRealm.Messaging.RabbitMq.Client
 {
     public class RabbitMqQueueCreator
     {
@@ -9,7 +9,7 @@ namespace MyRealm.Messaging.RabbitMQ.Client
 
         public RabbitMqQueueCreator(string hostAddress)
         {
-            this._hostAddress = hostAddress;
+            _hostAddress = hostAddress;
         }
         public void Create(string name = "default", bool durable = true, bool exclusive = false, bool autoDelete = false, IDictionary<string, object> optionalArguments = null)
         {
