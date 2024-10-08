@@ -6,11 +6,11 @@ namespace MyRealm.Authentication.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ApiUserController : BaseController
-    {
+    public class ApiUserController : ControllerBase
+	{
         private readonly IUserService UserService;
 
-        public ApiUserController(ILogger<BaseController> logger, IUserService userService) : base(logger)
+        public ApiUserController(IUserService userService)
         {
             this.UserService = userService;
         }
@@ -18,7 +18,6 @@ namespace MyRealm.Authentication.Api.Controllers
         [HttpPost("CreateUser")]
         public async Task<ActionResult> CreateUser(CreateApiUserRequest request)
         {
-            this.Logger.LogInformation($"Start creating user: {request.UserName}");
             await this.UserService.CreateUserAsync(new(request.UserName, request.Password));
             return Created();
         }

@@ -1,8 +1,6 @@
-﻿using MyRealm.Common.Entities;
-
-namespace MyRealm.Messaging.Domain.Entities.RabbitMq
+﻿namespace MyRealm.Messaging.Domain.Entities.RabbitMq
 {
-    public abstract class BaseRabbitMqMessage
+	public abstract class BaseRabbitMqMessage
     {
         public int Id { get; set; }
         public int MaxRetriesNumber { get; init; }
@@ -11,14 +9,13 @@ namespace MyRealm.Messaging.Domain.Entities.RabbitMq
 
         protected BaseRabbitMqMessage(int id, int maxRetriesNumber)
         {
-            Id = id;
-            MaxRetriesNumber = maxRetriesNumber;
-
+			this.Id = id;
+			this.MaxRetriesNumber = maxRetriesNumber;
         }
 
         public void IncreaseNumberOfFailedTries()
         {
-            RetryCount++;
+			this.RetryCount++;
         }
         public void SetSendDelayInSeconds(int delayInSeconds)
         {

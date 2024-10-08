@@ -1,6 +1,8 @@
 ﻿namespace MyRealm.Common.Repositories
 {
-    public interface IRepository<TEntity, TId> where TEntity : class where TId : struct
+    public interface IRepository<TEntity, TId> 
+        where TEntity : class 
+        where TId : struct
     {
         Task<IList<TEntity>> GetAllAsync();
         Task<TEntity?> GetByIdAsync(TId id);

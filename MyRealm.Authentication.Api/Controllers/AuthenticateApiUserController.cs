@@ -7,11 +7,11 @@ namespace MyRealm.Authentication.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class AuthenticateApiUserController : BaseController
-    {
+    public class AuthenticateApiUserController : ControllerBase
+	{
         private readonly IAuthService AuthService;
 
-        public AuthenticateApiUserController(ILogger<BaseController> logger, IAuthService authService) : base(logger)
+        public AuthenticateApiUserController(IAuthService authService)
         {
             this.AuthService = authService;
         }
@@ -19,7 +19,6 @@ namespace MyRealm.Authentication.Api.Controllers
         [HttpPost("Authenticate")]
         public async Task<AuthenticateApiUserResponse> Authenticate(AuthenticateApiUserRequest request)
         {
-            this.Logger.LogInformation($"Start authenticating user: {request.UserName}");
             var result = await this.AuthService.AuthenticateUserAsync(new(request.UserName, request.Password));
             return new(result.AccessToken.Value, result.RefreshToken.Value);
         }

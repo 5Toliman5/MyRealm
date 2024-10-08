@@ -9,7 +9,7 @@
         }
         protected BaseDomainMessage(MessageState state)
         {
-            this.State = state;
+			this.State = state;
         }
     }
 }
