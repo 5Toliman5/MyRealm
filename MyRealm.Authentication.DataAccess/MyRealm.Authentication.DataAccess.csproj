@@ -20,7 +20,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MyReailm.Authentication.Domain\MyReailm.Authentication.Domain.csproj" />
+    <ProjectReference Include="..\MyReailm.Authentication.Domain\MyRealm.Authentication.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

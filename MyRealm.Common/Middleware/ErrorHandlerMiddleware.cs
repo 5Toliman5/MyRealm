@@ -11,15 +11,15 @@ namespace MyRealm.Common.Middleware
 
         public ErrorHandlerMiddleware(RequestDelegate next, ILogger<ErrorHandlerMiddleware> logger)
         {
-            this.Next = next;
-            this.Logger = logger;
+            Next = next;
+            Logger = logger;
         }
 
         public async Task InvokeAsync(HttpContext context)
         {
             try
             {
-                await this.Next(context);
+                await Next(context);
             }
             catch (Exception ex)
             {
@@ -36,10 +36,10 @@ namespace MyRealm.Common.Middleware
             switch (ex)
             {
                 case NotFoundException:
-                    this.Logger.LogError(default(EventId), ex.Message);
+                    Logger.LogError(default(EventId), ex.Message);
                     return StatusCodes.Status404NotFound;
                 default:
-                    this.Logger.LogCritical(ex, "Critical error");
+                    Logger.LogCritical(ex, "Critical error");
                     return StatusCodes.Status500InternalServerError;
             }
         }

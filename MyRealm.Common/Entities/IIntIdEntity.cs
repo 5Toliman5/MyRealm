@@ -1,6 +1,6 @@
 ﻿namespace MyRealm.Common.Entities
 {
-    public interface IIntegerIdEntity
+    public interface IIntIdEntity
     {
         int Id { get; init; }
     }

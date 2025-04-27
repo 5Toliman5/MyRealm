@@ -1,13 +1,16 @@
-﻿using MyReailm.Authentication.Domain.Entities;
-using MyRealm.Common.Repositories;
+﻿using MyRealm.Authentication.Domain.Entities;
+using MyRealm.Common.Repositories.EF;
 
-namespace MyReailm.Authentication.Domain.Repositories
+namespace MyRealm.Authentication.Domain.Repositories
 {
-    public interface IUserRepository : IRepository<ApiUser>
+    public interface IUserRepository : IRepository<ApiUser, int>
     {
         Task<ApiUser?> GetByUserNameAsync(string userName);
+
         Task<ApiUser?> GetByAccessTokenAsync(string token);
+
         Task<ApiUser?> GetByResreshTokenAsync(string token);
-        Task<IList<string>> GetAllUserNamesAsync();
+
+        Task<bool> CheckIfUserNameIsTaken(string userName);
     }
 }

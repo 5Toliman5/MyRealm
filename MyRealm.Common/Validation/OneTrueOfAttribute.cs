@@ -1,35 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace MyRealm.Common.Validation
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
     public class OneTrueOfAttribute : ValidationAttribute
     {
-        private readonly string[] _propertyNames;
+        private readonly string[] PropertyNames;
 
         public OneTrueOfAttribute(params string[] propertyNames)
         {
-            _propertyNames = propertyNames;
+            PropertyNames = propertyNames;
         }
 
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
-            var properties = validationContext.ObjectType.GetProperties()
-                .Where(p => _propertyNames.Contains(p.Name))
-                .ToList();
+            var properties = validationContext.ObjectType
+                .GetProperties()
+                .Where(x => PropertyNames.Contains(x.Name))
+                .ToArray();
 
-            var trueCount = properties.Count(p => (bool)p.GetValue(validationContext.ObjectInstance));
-
-            if (trueCount == 1)
+            if (properties.Length != PropertyNames.Length)
             {
-                return ValidationResult.Success;
-            }
-            return new ValidationResult($"Only one of the following properties can be true: {string.Join(", ", _propertyNames)}");
+				throw new ArgumentException($"Some of the specified properties are not found");
+			}
+
+			var values = properties.Select(x => x.GetValue(validationContext.ObjectInstance));
+            if (values.Any(x => x is not null and not bool))
+            {
+				throw new ArgumentException($"Some of the specified properties are not recognized as Boolean");
+			}
+			if (values.Count(x => x is true) > 1)
+			{
+				return new ValidationResult($"Only one of the following properties can be true: {string.Join(", ", PropertyNames)}");
+			}
+
+            return ValidationResult.Success;
         }
     }
 }

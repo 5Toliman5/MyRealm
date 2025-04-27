@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using MyRealm.Authentication.DataAccess.EF;
 using MyRealm.Common.Middleware;
-using MyRealm.DataAccess.EFDbContexts;
 
 namespace MyRealm.Authentication.Api
 {
@@ -13,7 +13,7 @@ namespace MyRealm.Authentication.Api
             // Add services to the container.
             builder.Services.AddControllers();
             builder.Services.RegisterDataAccessLayer(builder.Configuration);
-            builder.Services.RegisterInfrastructureLayer(builder.Configuration);
+            builder.Services.RegisterApplicationLayer(builder.Configuration);
 
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

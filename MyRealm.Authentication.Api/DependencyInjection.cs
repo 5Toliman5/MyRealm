@@ -1,12 +1,11 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using MyReailm.Authentication.Domain.Repositories;
-using MyReailm.Authentication.Domain.Services;
-using MyRealm.Authentication.Infrastructure.Models;
-using MyRealm.Authentication.Infrastructure.Services;
-using MyRealm.DataAccess.EFDbContexts;
-using MyRealm.DataAccess.Repositories;
+using MyRealm.Authentication.Application.Models;
+using MyRealm.Authentication.Application.Services;
+using MyRealm.Authentication.DataAccess.EF;
+using MyRealm.Authentication.DataAccess.Repositories;
+using MyRealm.Authentication.Domain.Repositories;
+using MyRealm.Authentication.Domain.Services;
 
 namespace MyRealm.Authentication.Api
 {
@@ -18,9 +17,8 @@ namespace MyRealm.Authentication.Api
             services.AddTransient<IUserRepository, UserRepository>();
             return services;
         }
-        public static IServiceCollection RegisterInfrastructureLayer(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection RegisterApplicationLayer(this IServiceCollection services, IConfiguration configuration)
         {
-            //builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
             var jwtSettings = new JwtSettings();
             configuration.Bind(JwtSettings.SectionName, jwtSettings);
             services.AddSingleton(jwtSettings);

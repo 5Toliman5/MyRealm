@@ -1,16 +1,17 @@
 ﻿using Microsoft.AspNet.Identity;
-using MyReailm.Authentication.Domain.DTO;
-using MyReailm.Authentication.Domain.Entities;
-using MyReailm.Authentication.Domain.Repositories;
-using MyReailm.Authentication.Domain.Services;
-using MyRealm.Authentication.Infrastructure.Exceptions;
+using MyRealm.Authentication.Domain.Entities;
+using MyRealm.Authentication.Domain.Exceptions;
+using MyRealm.Authentication.Domain.Models;
+using MyRealm.Authentication.Domain.Repositories;
+using MyRealm.Authentication.Domain.Services;
 
-namespace MyRealm.Authentication.Infrastructure.Services
+namespace MyRealm.Authentication.Application.Services
 {
     public class UserService : IUserService
     {
         private readonly IUserRepository UserRepository;
         private readonly IPasswordHasher PasswordHasher;
+
         public UserService(IUserRepository userRepository, IPasswordHasher passwordHasher)
         {
             UserRepository = userRepository;
@@ -19,17 +20,19 @@ namespace MyRealm.Authentication.Infrastructure.Services
 
         public async Task CreateUserAsync(CreateUserRequestDto request)
         {
-            var existingUser = await this.UserRepository.GetByUserNameAsync(request.UserName);
+            var existingUser = await UserRepository.GetByUserNameAsync(request.UserName);
             if (existingUser is not null)
                 throw new UserAlreadyExistsException($"There is already a user with username {request.UserName}.");
-            var passwordHash = this.PasswordHasher.HashPassword(request.Password);
-            var user = new ApiUser(request.UserName, passwordHash);
-            await this.UserRepository.InsertAsync(user);
+
+            var passwordHash = PasswordHasher.HashPassword(request.Password);
+            var user = new ApiUser(request.UserName, passwordHash, request.Email);
+
+            await UserRepository.InsertAsync(user);
         }
-        public async Task<bool> CheckIfUsernameIsTaken(string userName)
+
+        public Task<bool> CheckIfUsernameIsTaken(string userName)
         {
-            var usernames = await this.UserRepository.GetAllUserNamesAsync();
-            return userName.Contains(userName);
+			return UserRepository.CheckIfUserNameIsTaken(userName);
         }
     }
 }

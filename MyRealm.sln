@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRealm.Authentication.Infrastructure", "MyRealm.Authentication.Infrastructure\MyRealm.Authentication.Infrastructure.csproj", "{9CC5EDF5-7D96-460F-82C8-728D08FA05E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRealm.Authentication.Application", "MyRealm.Authentication.Infrastructure\MyRealm.Authentication.Application.csproj", "{9CC5EDF5-7D96-460F-82C8-728D08FA05E0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication", "Authentication", "{04E152FA-CA70-4C54-A110-A773AFF84202}"
 EndProject
@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRealm.Messaging.RabbitMQ.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRealm.Messaging.Api", "MyRealm.Messaging.Api\MyRealm.Messaging.Api.csproj", "{9EB92804-6562-4802-BCF4-319BB6A40E7B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyReailm.Authentication.Domain", "MyReailm.Authentication.Domain\MyReailm.Authentication.Domain.csproj", "{44C2B541-F44C-4170-997A-F3D63A89F252}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRealm.Authentication.Domain", "MyReailm.Authentication.Domain\MyRealm.Authentication.Domain.csproj", "{44C2B541-F44C-4170-997A-F3D63A89F252}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRealm.Messaging.Domain", "MyRealm.Messaging.Domain\MyRealm.Messaging.Domain.csproj", "{5BFA57D9-58C6-4CAA-8FDC-35CA38182984}"
 EndProject

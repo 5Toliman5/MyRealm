@@ -1,16 +1,21 @@
-﻿namespace MyRealm.Common.Repositories
+﻿namespace MyRealm.Common.Repositories.EF
 {
     public interface IRepository<TEntity, TId> 
         where TEntity : class 
         where TId : struct
     {
-        Task<IList<TEntity>> GetAllAsync();
+        Task<ICollection<TEntity>> GetAllAsync();
+
         Task<TEntity?> GetByIdAsync(TId id);
+
         Task<TEntity> InsertAsync(TEntity entity);
-        Task InsertAsync(IEnumerable<TEntity> entities);
+
+        Task InsertAsync(ICollection<TEntity> entities);
+
         Task UpdateAsync(TEntity entity);
+
         Task DeleteAsync(TEntity entity);
+
         Task DeleteByIdAsync(TId id);
     }
-
 }

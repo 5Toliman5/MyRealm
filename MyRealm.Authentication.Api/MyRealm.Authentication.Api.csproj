@@ -18,10 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MyReailm.Authentication.Domain\MyReailm.Authentication.Domain.csproj" />
+    <ProjectReference Include="..\MyReailm.Authentication.Domain\MyRealm.Authentication.Domain.csproj" />
     <ProjectReference Include="..\MyRealm.Authentication.Contracts\MyRealm.Authentication.Contracts.csproj" />
 	  <ProjectReference Include="..\MyRealm.Authentication.DataAccess\MyRealm.Authentication.DataAccess.csproj" />
-    <ProjectReference Include="..\MyRealm.Authentication.Infrastructure\MyRealm.Authentication.Infrastructure.csproj" />
+    <ProjectReference Include="..\MyRealm.Authentication.Infrastructure\MyRealm.Authentication.Application.csproj" />
     <ProjectReference Include="..\MyRealm.Common\MyRealm.Common.csproj" />
   </ItemGroup>
 

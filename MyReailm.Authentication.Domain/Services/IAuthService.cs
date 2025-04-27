@@ -1,10 +1,11 @@
-﻿using MyReailm.Authentication.Domain.DTO;
+﻿using MyRealm.Authentication.Domain.Models;
 
-namespace MyReailm.Authentication.Domain.Services
+namespace MyRealm.Authentication.Domain.Services
 {
     public interface IAuthService
     {
         Task<AuthenticateUserResponseDto> AuthenticateUserAsync(AuthenticateUserRequestDto request);
+
         Task<AuthenticateUserResponseDto> RefreshTokensAsync(string refreshToken);
     }
 }

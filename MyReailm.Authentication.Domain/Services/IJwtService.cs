@@ -1,7 +1,7 @@
-﻿using MyReailm.Authentication.Domain.DTO;
-using MyReailm.Authentication.Domain.Entities;
+﻿using MyRealm.Authentication.Domain.Entities;
+using MyRealm.Authentication.Domain.Models;
 
-namespace MyReailm.Authentication.Domain.Services
+namespace MyRealm.Authentication.Domain.Services
 {
     public interface IJwtService
     {
